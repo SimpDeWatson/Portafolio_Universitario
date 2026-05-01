@@ -1,0 +1,103 @@
+/* =========================================
+   perfil.css — Página Perfil — Neon Cyber Detective
+   ========================================= */
+
+.perfil-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 65px);
+  padding: 2rem;
+}
+
+.profile-card {
+  background: var(--bg-card);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 3.5rem 3rem;
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 245, 255, 0.35);
+  animation: fadeIn 0.8s ease;
+  backdrop-filter: blur(10px);
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent2), var(--accent3), transparent);
+}
+
+/* Avatar Neon */
+.profile-avatar-ring {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  padding: 4px;
+  margin: 0 auto 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--glow-cyan), var(--glow-pink);
+}
+
+.profile-avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg-card2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  overflow: hidden;
+  border: 3px solid var(--bg-dark);
+}
+
+.profile-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+  text-shadow: var(--glow-cyan);
+}
+
+.profile-name span.highlighted {
+  background: var(--accent2);
+  color: #0a0a0f;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.profile-role {
+  color: var(--accent3);
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-family: 'VT323', monospace;
+}
+
+.profile-bio {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-family: 'VT323', monospace;
+  text-align: left;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.profile-bio strong {
+  color: var(--accent);
+}
